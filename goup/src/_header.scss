@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px;
+
+  &__left, &__right {
+    width: 50%;
+  }
+
+  &__left {
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+
+    @media screen and (min-width: 768px) {
+      width: 75%;
+    }
+
+    @media screen and (min-width: 992px) {
+      widtH: 61%;
+    }
+  }
+
+  &__right {
+    //justify-content: flex-end;
+    text-align: right;
+    align-self: center;
+
+    @media screen and (min-width: 768px) {
+      width: 25%;
+    }
+
+    @media screen and (min-widtH: 992px) {
+      width: 39%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 15px;
+      font-size: 14px;
+
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+        margin-right: 15px;
+        align-self: center;
+      }
+
+      @media screen and (min-widtH: 1200px) {
+        margin-right: 35px;
+      }
+    }
+
+    .button {
+      display: inline-block !important;
+    }
+
+    .hamburger {
+      display: block;
+
+      span {
+        height: 1px;
+        widtH: 20px;
+        background: black;
+        display: block;
+        margin: 8px 0 0 auto;
+
+        &:nth-of-type(2) {
+          width: 25px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+    }
+
+    a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 16px;
+      display: inline-block;
+      color: #fff;
+      line-height: 50px;
+      text-align: center;
+      background: #d8441d;
+      align-self: center;
+      margin: 0 5px;
+    }
+
+    p {
+      background: black;
+      color: white;
+      margin: 5px 0;
+      font-size: 13px;
+      padding: 0 5px;
+
+      &:last-of-type {
+        widtH: 35px;
+      }
+    }
+  }
+
+  &__nav {
+    display: block;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-self: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    li {
+      margin: 10px 0;
+
+      @media screen and (min-width: 768px) {
+        margin: 10px 15px;
+      }
+
+      &:last-of-type {
+        a:after {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 14px;
+
+      &:after {
+        background-image: url("../assets/down-arrow.svg");
+        height: 10px;
+        width: 10px;
+        content: '';
+        display: inline-block;
+        background-position: center;
+        background-size: cover;
+        margin-left: 10px;
+      }
+    }
+  }
+}

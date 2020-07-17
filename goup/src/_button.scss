@@ -1,0 +1,22 @@
+.button {
+  color: white !important;
+  padding: 10px  25px;
+  display: inline-block;
+  transition: all 0.25s ease-in-out;
+
+  &--orange {
+    background: #d8441d;
+
+    &:hover {
+      background: black;
+    }
+  }
+
+  &--black {
+    background: black;
+
+    &:hover {
+      background: #d8441d;
+    }
+  }
+}

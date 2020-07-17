@@ -1,0 +1,192 @@
+.hero-image {
+  background-image: url("../assets/hero-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 550px;
+  position: relative;
+
+  @media screen and (min-width: 992px) {
+    height: 700px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    margin-bottom: 15px;
+    //background: white;
+    //padding: 3px;
+
+    @media screen and (min-width: 768px) {
+      background: white;
+      padding: 8px;
+      display: flex;
+    }
+
+    label {
+      display: none;
+    }
+
+    input {
+      border: none;
+    }
+
+    .button {
+      margin: 0 auto;
+      display: block;
+    }
+
+    #searchBox {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 768px) {
+        width: 75%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+  }
+
+  &__feefo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+    }
+
+    img {
+      height: 30px;
+
+      &:first-of-type {
+        @media screen and (min-width: 768px) {
+          height: 40px;
+        }
+      }
+
+      &:last-of-type {
+        @media screen and (min-width: 768px) {
+          height: 25px;
+          align-self: center;
+        }
+      }
+    }
+
+    p {
+      @media screen and (min-width: 768px) {
+        margin: 0;
+        align-self: center;
+      }
+    }
+
+  }
+
+  #explore {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    color: white;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 50px;
+      width: 2px;
+      background: white;
+    }
+
+    &:after {
+      content: 'EXPLORE';
+      display: inline-block;
+      top: -33px;
+      left: -32px;
+      position: absolute;
+
+      @media screen and (min-width: 992px) {
+        transform: rotate(-90deg);
+        top: -55px;
+      }
+    }
+  }
+}
+
+.alert-dropdown {
+  background: rgba(105, 105, 105, 0.5);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  position: relative;
+  z-index: 999;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 0;
+  }
+
+  p {
+    width: 75%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 992px){
+      font-weight: bold;
+    }
+
+    span {
+      &:after {
+        content: '';
+        display: inline-block;
+        height: 15px;
+        widtH: 15px;
+        background: url("../assets/finger-left.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  img {
+    widtH: 25px;
+    //transform: rotateY(90deg);
+  }
+
+  #alertDropdownClose {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 20px;
+      background: white;
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 20px;
+      background: white;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
